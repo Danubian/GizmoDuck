@@ -31,7 +31,7 @@ package robotlegs.gizmoduck.extensions.viewProcessorMap.impl
 
 		private const _mappers:Dictionary = new Dictionary();
 
-		private var _handler:IViewProcessorViewHandler;
+		private var _handler:ViewProcessorViewHandler;
 
 		private const NULL_UNMAPPER:IViewProcessorUnmapper = new NullViewProcessorUnmapper();
 
@@ -42,7 +42,7 @@ package robotlegs.gizmoduck.extensions.viewProcessorMap.impl
 		/**
 		 * @private
 		 */
-		public function ViewProcessorMap(factory:IViewProcessorFactory, handler:IViewProcessorViewHandler = null)
+		public function ViewProcessorMap(factory:IViewProcessorFactory, handler:ViewProcessorViewHandler = null)
 		{
 			_handler = handler || new ViewProcessorViewHandler(factory);
 		}

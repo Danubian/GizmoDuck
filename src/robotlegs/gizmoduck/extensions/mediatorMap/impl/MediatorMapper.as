@@ -58,9 +58,9 @@ package robotlegs.gizmoduck.extensions.mediatorMap.impl
 		public function toMediator(mediatorClass:Class):IMediatorConfigurator
 		{
 			const mapping:IMediatorMapping = _mappings[mediatorClass];
-			return mapping
-				? overwriteMapping(mapping)
-				: createMapping(mediatorClass);
+//			return mapping 
+//			? overwriteMapping(mapping) 
+			return createMapping(mediatorClass);
 		}
 
 		/**
@@ -87,7 +87,7 @@ package robotlegs.gizmoduck.extensions.mediatorMap.impl
 		/* Private Functions                                                          */
 		/*============================================================================*/
 
-		private function createMapping(mediatorClass:Class):MediatorMapping
+		private function createMapping(mediatorClass:Class):IMediatorConfigurator
 		{
 			const mapping:MediatorMapping = new MediatorMapping(_typeFilter, mediatorClass);
 			_handler.addMapping(mapping);
